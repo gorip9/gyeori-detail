@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>겨리 특등급 신동진 10kg 상세페이지</title>
+
+<!-- 외부 의존: Google Fonts CDN 1건만 사용 (Noto Serif KR / Noto Sans KR / Bebas Neue)
+     본문 폰트는 Pretendard가 기기에 설치되어 있으면 우선 적용되고, 없으면 Noto Sans KR로 대체됩니다.
+     ※ 일부 오픈마켓 에디터는 <link>·<style>을 제거합니다. 등록 후 폰트가 깨지면 이미지 캡션으로 대체하세요. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans+KR:wght@400;500;600;700;800&family=Noto+Serif+KR:wght@500;700&display=swap" rel="stylesheet">
+
+<style>
+/* ═══════════════════════════════════════════
+   0. 토큰 · 리셋
+   ═══════════════════════════════════════════ */
+:root{
+  --main:#6A7842;        /* 논빛 올리브그린 */
+  --point:#C49445;       /* 포인트 — 강조 키워드 / CTA / 수치에만 */
+  --bg:#FAF8F2;          /* 배경 */
+  --sub-bg:#F3EBDD;      /* 보조 배경 */
+  --text:#3A2E24;        /* 텍스트 */
+  --white:#FFFFFF;
+  --dark:#2A241E;        /* 문제 공감 섹션 다크톤 */
+  --grad:linear-gradient(135deg,#6A7842 0%,#C49445 100%);
+
+  --ph-bg:#EEE9DF; --ph-tx:#6E665C; --ph-sub:#7A7167; --ph-bd:#B8AE9E;
+
+  --f-body:'Pretendard Variable',Pretendard,'Noto Sans KR',-apple-system,BlinkMacSystemFont,system-ui,sans-serif;
+  --f-serif:'Noto Serif KR',serif;
+  --f-num:'Bebas Neue','Pretendard Variable',sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box;}
+html{-webkit-text-size-adjust:100%;}
+body{
+  margin:0;background:var(--bg);color:var(--text);
+  font-family:var(--f-body);font-weight:400;
+  word-break:keep-all;overflow-wrap:break-word;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block;}
+
+/* 모바일 기준 · 640px 중앙 정렬 */
+.wrap{max-width:640px;margin:0 auto;background:var(--bg);overflow:hidden;}
+section{padding:88px 24px;}
+@media (max-width:420px){ section{padding:72px 20px;} }
+
+/* ── 타이포 ───────────────────────────────── */
+.label{                                   /* 카테고리 레이블 11~12px */
+  font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--main);margin:0 0 20px;
+}
+.label.on-dark{color:var(--point);}
+.h1{                                      /* 메인 헤드라인 */
+  font-family:var(--f-serif);font-weight:700;
+  font-size:clamp(50px,12.5vw,64px);letter-spacing:-.03em;line-height:1.2;
+  margin:0 0 24px;
+}
+.h2{                                      /* 서브 헤드라인 */
+  font-family:var(--f-serif);font-weight:700;
+  font-size:clamp(28px,7.2vw,34px);letter-spacing:-.02em;line-height:1.35;
+  margin:0 0 20px;
+}
+.body{                                    /* 본문 카피 */
+  font-size:16px;font-weight:400;letter-spacing:-.01em;line-height:1.8;
+  margin:0 0 10px;
+}
+.body:last-child{margin-bottom:0;}
+.small{font-size:13px;font-weight:400;line-height:1.65;opacity:.55;}
+.pt{color:var(--point);font-weight:700;}   /* 강조 키워드 — 섹션당 1~2개만 */
+.mn{color:var(--main);font-weight:700;}
+
+/* ── 이미지 플레이스홀더 ──────────────────── */
+.ph{
+  background:var(--ph-bg);border:2px dashed var(--ph-bd);border-radius:12px;
+  padding:28px 24px;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;text-align:center;gap:10px;
+  color:var(--ph-tx);width:100%;
+}
+.ph svg{width:26px;height:26px;fill:var(--main);opacity:.9;}
+.ph-main{font-size:13px;font-weight:600;letter-spacing:-.01em;line-height:1.5;}
+.ph-sub{font-size:11px;color:var(--ph-sub);line-height:1.65;}
+.r-43{aspect-ratio:4/3;} .r-11{aspect-ratio:1/1;} .r-169{aspect-ratio:16/9;} .r-34{aspect-ratio:3/4;}
+
+/* ── 수치 블록 ────────────────────────────── */
+.num{
+  font-family:var(--f-num);font-size:clamp(72px,19vw,92px);line-height:1;
+  letter-spacing:.01em;color:var(--main);display:block;margin:0;
+}
+.num-unit{font-family:var(--f-body);font-size:16px;font-weight:600;letter-spacing:-.02em;margin-left:6px;}
+
+/* ── 스크롤 리빌 / 애니메이션 ─────────────── */
+.rv{opacity:0;transform:translateY(24px);transition:opacity .6s ease-out,transform .6s ease-out;}
+.rv.on{opacity:1;transform:none;}
+.rv.d1{transition-delay:.1s} .rv.d2{transition-delay:.2s} .rv.d3{transition-delay:.3s}
+@media (prefers-reduced-motion:reduce){ .rv{opacity:1;transform:none;transition:none;} }
+
+/* ═══ 01 히어로 ═══ */
+.hero{
+  min-height:100svh;background:var(--bg);
+  display:flex;flex-direction:column;justify-content:center;
+  padding-top:64px;padding-bottom:56px;
+}
+.hero .h1{margin-bottom:28px;}
+.price-row{display:flex;align-items:flex-end;gap:10px;flex-wrap:wrap;margin:0 0 6px;}
+.price-row .num{font-size:clamp(64px,17vw,84px);letter-spacing:-.02em;}
+.price-won{font-size:22px;font-weight:800;letter-spacing:-.03em;color:var(--main);padding-bottom:10px;}
+.kg-line{font-size:15px;font-weight:500;letter-spacing:-.01em;color:var(--text);opacity:.6;margin:0 0 26px;}
+.hero-sub{font-size:17px;font-weight:500;line-height:1.75;letter-spacing:-.02em;margin:0 0 32px;}
+.rule{width:36px;height:3px;background:var(--point);border-radius:2px;margin:0 0 26px;}
+
+.cta{
+  display:block;width:100%;text-align:center;text-decoration:none;
+  background:var(--point);color:#fff;font-family:var(--f-body);
+  font-size:17px;font-weight:700;letter-spacing:-.02em;
+  padding:19px 20px;border-radius:10px;border:0;cursor:pointer;
+  box-shadow:0 6px 18px rgba(196,148,69,.28);
+}
+.cta.pulse{animation:pulse 1.5s ease-in-out infinite;}
+@keyframes pulse{
+  0%,100%{transform:scale(1);box-shadow:0 6px 18px rgba(196,148,69,.28);}
+  50%{transform:scale(1.018);box-shadow:0 10px 26px rgba(196,148,69,.42);}
+}
+@media (prefers-reduced-motion:reduce){ .cta.pulse{animation:none;} }
+
+/* ═══ 02 문제 공감 (다크) ═══ */
+.dark{background:var(--dark);color:#EDE7DD;}
+.dark .h2{color:#fff;}
+.voc{
+  border-left:2px solid rgba(196,148,69,.55);
+  padding:2px 0 2px 18px;margin:0 0 22px;
+}
+.voc p{font-size:15px;line-height:1.8;letter-spacing:-.01em;margin:0;color:#DAD2C6;}
+.voc span{display:block;font-size:12px;margin-top:8px;opacity:.45;}
+.dark .body{color:#DAD2C6;}
+
+/* ═══ 패턴 A — 텍스트 좌 + 이미지 우 ═══ */
+.pat-a{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:center;}
+@media (max-width:480px){ .pat-a{grid-template-columns:1fr;gap:26px;} }
+
+/* ═══ 패턴 B — 이미지 풀블리드 상단 + 텍스트 하단 ═══ */
+.pat-b{padding-left:0;padding-right:0;}
+.pat-b .full{width:100%;border-radius:0;border-left:0;border-right:0;aspect-ratio:16/10;}
+.pat-b .txt{padding:36px 24px 0;}
+@media (max-width:420px){ .pat-b .txt{padding:32px 20px 0;} }
+
+/* ═══ 패턴 C — 이미지 배경 + 텍스트 오버레이 ═══ */
+.pat-c{position:relative;background:#3A3226;color:#fff;padding-top:104px;padding-bottom:170px;overflow:hidden;}
+.pat-c .bgph{
+  position:absolute;inset:0;background:var(--ph-bg);
+  display:flex;flex-direction:column;align-items:center;justify-content:flex-end;
+  gap:8px;text-align:center;padding:20px;color:var(--ph-tx);
+  border:2px dashed var(--ph-bd);
+}
+.pat-c .bgph svg{position:absolute;top:26px;left:50%;transform:translateX(-50%);}
+.pat-c .veil{position:absolute;inset:0;background:rgba(30,26,20,.6);}
+.pat-c .inner{position:relative;z-index:2;}
+.pat-c .h2{color:#fff;}
+.pat-c .body{color:#E6DFD4;}
+
+/* ═══ 06 수치 (그라데이션) ═══ */
+.grad{background:var(--grad);color:#fff;}
+.grad .label{color:rgba(255,255,255,.72);}
+.grad .h2{color:#fff;}
+.stat{padding:30px 0;border-bottom:1px solid rgba(255,255,255,.22);}
+.stat:last-of-type{border-bottom:0;}
+.stat .num{color:#fff;}
+.stat .num-unit{color:rgba(255,255,255,.85);}
+.stat p{margin:6px 0 0;font-size:15px;font-weight:500;letter-spacing:-.01em;color:rgba(255,255,255,.88);}
+.stat .grade{font-family:var(--f-serif);font-weight:700;font-size:64px;line-height:1;color:#fff;}
+.bar{height:6px;border-radius:4px;background:rgba(255,255,255,.25);margin-top:16px;overflow:hidden;}
+.bar i{display:block;height:100%;width:0;background:#fff;border-radius:4px;transition:width 1.2s ease-out;}
+
+/* ═══ 07 비교표 ═══ */
+.cmp{width:100%;border-collapse:collapse;font-size:13.5px;line-height:1.6;margin-top:8px;}
+.cmp th,.cmp td{padding:15px 10px;text-align:left;vertical-align:top;border-bottom:1px solid #E6DDCC;}
+.cmp thead th{font-size:12px;font-weight:600;letter-spacing:-.01em;padding-bottom:12px;}
+.cmp .c-item{width:27%;font-weight:600;color:var(--text);}
+.cmp .c-etc{width:34%;opacity:.4;}
+.cmp .c-us{width:39%;background:rgba(196,148,69,.09);font-weight:500;color:var(--text);}
+.cmp thead .c-us{background:var(--point);color:#fff;border-radius:8px 8px 0 0;text-align:center;}
+.cmp tbody tr:last-child .c-us{border-radius:0 0 8px 8px;}
+.badge{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.06em;background:#fff;color:var(--point);padding:3px 7px;border-radius:20px;margin-left:6px;vertical-align:middle;}
+
+/* ═══ 08 타임라인 ═══ */
+.tl{border-left:2px solid rgba(106,120,66,.3);margin:8px 0 0;padding:4px 0 4px 26px;}
+.tl li{position:relative;list-style:none;padding:0 0 34px;}
+.tl li:last-child{padding-bottom:0;}
+.tl li::before{
+  content:'';position:absolute;left:-34px;top:5px;width:11px;height:11px;border-radius:50%;
+  background:var(--main);box-shadow:0 0 0 4px var(--sub-bg);
+}
+.tl li.hi::before{background:var(--point);}
+.tl .when{font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--main);margin:0 0 8px;}
+.tl .what{font-size:17px;font-weight:700;letter-spacing:-.02em;line-height:1.45;margin:0 0 8px;}
+.tl .said{font-size:14px;line-height:1.75;color:var(--text);opacity:.72;margin:0;}
+
+/* ═══ 09 리뷰 ═══ */
+.star{color:var(--point);font-size:15px;letter-spacing:2px;}
+.rev{border:1px solid #E6DDCC;border-radius:12px;padding:22px;margin:0 0 14px;background:#fff;}
+.rev p{font-size:15px;line-height:1.8;margin:10px 0 0;letter-spacing:-.01em;}
+.rev .who{font-size:12px;opacity:.45;margin-top:12px;}
+.trust{border-top:1px solid #E6DDCC;margin-top:26px;padding-top:24px;}
+.trust div{display:flex;align-items:center;gap:10px;font-size:14px;font-weight:500;letter-spacing:-.01em;padding:9px 0;}
+.trust svg{width:17px;height:17px;fill:var(--main);flex:none;}
+.editnote{font-size:11.5px;line-height:1.6;color:var(--ph-sub);background:var(--ph-bg);border:1px dashed var(--ph-bd);border-radius:8px;padding:12px 14px;margin:0 0 18px;}
+
+/* ═══ 10 최종 CTA ═══ */
+.final{background:var(--main);color:#fff;}
+.final .label{color:rgba(255,255,255,.72);}
+.final .h2{color:#fff;}
+.final .body{color:rgba(255,255,255,.9);}
+.why{background:rgba(255,255,255,.1);border-radius:12px;padding:22px;margin:26px 0;}
+.why p{margin:0 0 8px;font-size:15px;line-height:1.75;color:rgba(255,255,255,.92);letter-spacing:-.01em;}
+.why p:last-child{margin-bottom:0;}
+.buybox{background:#fff;border-radius:14px;padding:24px;margin:0 0 16px;color:var(--text);}
+.buybox .pr{display:flex;align-items:flex-end;gap:8px;}
+.buybox .num{font-size:60px;color:var(--main);}
+.buybox .price-won{font-size:19px;padding-bottom:7px;}
+.buybox .note{font-size:13px;line-height:1.65;opacity:.6;margin:8px 0 18px;}
+.timer{display:flex;align-items:center;justify-content:center;gap:8px;font-size:13.5px;font-weight:600;letter-spacing:-.01em;color:rgba(255,255,255,.9);margin-top:14px;}
+.timer b{font-family:var(--f-num);font-size:22px;letter-spacing:.04em;color:#fff;}
+
+/* ═══ 부록 ═══ */
+.appx{background:var(--sub-bg);padding-top:56px;padding-bottom:64px;}
+.appx table{width:100%;border-collapse:collapse;font-size:13px;line-height:1.65;}
+.appx th,.appx td{padding:11px 8px;border-bottom:1px solid #E2D8C6;text-align:left;vertical-align:top;}
+.appx th{width:38%;font-weight:600;opacity:.65;}
+.appx .fill{color:#9A8F7F;}
+</style>
+</head>
+
+<body>
+<div class="wrap">
+
+<!-- ═══════════════════════════════════════════════════════════
+     SECTION 01 · 히어로 배너 (100vh)
+     메시지 1개: 특등급 신동진 10kg 35,900원
+     ═══════════════════════════════════════════════════════════ -->
+<section class="hero">
+  <p class="label rv">SPECIAL GRADE · SINDONGJIN</p>
+
+  <h1 class="h1 rv d1">특등급 신동진<br>10<span style="font-family:var(--f-body);font-weight:800;letter-spacing:-.04em;">kg</span></h1>
+
+  <div class="price-row rv d1">
+    <span class="num" data-count="35900" data-comma="1">0</span>
+    <span class="price-won">원</span>
+  </div>
+  <p class="kg-line rv d1">kg당 3,590원 · 전주 산지 직접 도정</p>
+
+  <div class="rule rv d2"></div>
+  <p class="hero-sub rv d2">
+    포장에 <span class="pt">도정연월일</span>을 찍어 보냅니다.<br>
+    말로 하지 않고, 확인하실 수 있게 보냅니다.
+  </p>
+
+  <a class="cta pulse rv d2" href="#buy">구매하기</a>
+
+  <div class="ph r-43 rv d3" style="margin-top:34px;">
+    <svg viewBox="0 0 24 24"><path d="M4 5h16a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm1 2v8.6l4.2-4.1 3.3 3.2 3.4-3.4L19 14.3V7H5zm3.2 1.6a1.6 1.6 0 1 1 0 3.2 1.6 1.6 0 0 1 0-3.2z"/></svg>
+    <p class="ph-main">[S01-HERO · 필요한 이미지 교체]<br>흰 배경 위 포대 정면 + 특등급·중량 라벨</p>
+    <p class="ph-sub">권장 비율 4:3 · 최소 1200×900px<br>촬영 방향 — 정면 아이레벨, 자연광, 그림자 최소</p>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     SECTION 02 · 문제 공감 (다크톤 · 부정 VOC 인용)
+     메시지 1개: 쌀 사고 실망한 그 경험, 원인이 있습니다
+     ═══════════════════════════════════════════════════════════ -->
+<section class="dark">
+  <p class="label on-dark rv">WHY YOU WERE DISAPPOINTED</p>
+  <h2 class="h2 rv d1">쌀 사고 실망한 적,<br>있으시죠</h2>
+
+  <div class="voc rv d1">
+    <p>“먹으면 먹을수록 쌀에서 냄새나고 부스러기 많고 검은 쌀눈 곳곳에서 보이고… 결국 다 못먹고 다른쌀 샀네요”</p>
+    <span>실제 구매 후기 · 타 제품</span>
+  </div>
+  <div class="voc rv d2">
+    <p>“쌀알도 굵고 좋아보였는데 밥을 해보니 윤기도 없고 정부미처럼 날라다니는 느낌”</p>
+    <span>실제 구매 후기 · 타 제품</span>
+  </div>
+  <div class="voc rv d2">
+    <p>“도정날짜가 최근인데 밥할 때 물을 엄청 많이 먹는게 묵은거 같기도 하고…”</p>
+    <span>실제 구매 후기 · 타 제품</span>
+  </div>
+
+  <div class="ph r-169 rv d3" style="margin:30px 0 26px;">
+    <svg viewBox="0 0 24 24"><path d="M12 3 3 20h18L12 3zm0 4.6 5.5 10.4h-11L12 7.6zM11 11h2v4h-2v-4zm0 5h2v2h-2v-2z"/></svg>
+    <p class="ph-main">[S02-PROBLEM · 필요한 이미지 교체]<br>싸라기·변색립이 섞인 쌀 접사</p>
+    <p class="ph-sub">권장 비율 16:9 · 최소 1440×810px<br>촬영 방향 — 탑다운, 측광으로 결점이 드러나게</p>
+  </div>
+
+  <p class="body rv d3">
+    세 불만은 늘 같은 자리에서 나옵니다.
+    <span class="pt">깨진 쌀알</span>, 도정 후 흘러간 시간,
+    그리고 살 때는 그 둘을 확인할 방법이 없다는 것.
+  </p>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     SECTION 03 · USP ① (패턴 A — 텍스트 좌 + 이미지 우)
+     불만족 1위 = 푸석한 식감 / 깨진 쌀알
+     ═══════════════════════════════════════════════════════════ -->
+<section style="background:var(--white);">
+  <div class="pat-a">
+    <div>
+      <p class="label rv">POINT 01 · 깨진 쌀알</p>
+      <h2 class="h2 rv d1">푸석함은<br>쌀이 아니라<br>깨진 쌀알 탓입니다</h2>
+    </div>
+    <div class="ph r-11 rv d2">
+      <svg viewBox="0 0 24 24"><path d="M12 2c2.5 3 4 5.8 4 8.4A4 4 0 0 1 12 15a4 4 0 0 1-4-4.6C8 7.8 9.5 5 12 2zm-6.6 9.6c2.4.6 4 1.6 4.7 3a3.2 3.2 0 0 1-1.6 4.3 3.2 3.2 0 0 1-4-1.6c-.7-1.4-.7-3.3.9-5.7zm13.2 0c1.6 2.4 1.6 4.3.9 5.7a3.2 3.2 0 0 1-4 1.6 3.2 3.2 0 0 1-1.6-4.3c.7-1.4 2.3-2.4 4.7-3z"/></svg>
+      <p class="ph-main">[S03-GRAIN · 필요한 이미지 교체]<br>쌀알 클로즈업 — 완전미가 보이게</p>
+      <p class="ph-sub">권장 비율 1:1 · 최소 1200×1200px<br>촬영 방향 — 매크로, 흰 배경, 낱알 경계 선명</p>
+    </div>
+  </div>
+
+  <p class="body rv d3" style="margin-top:26px;">
+    등급은 그 깨진 쌀알을 몇 %까지 허용하는지 정해 둔 기준입니다.
+    겨리는 <span class="mn">특등급</span> 기준으로 도정하고, 싸라기·변색립·피해립을 선별해 내보냅니다.
+  </p>
+  <p class="small rv d3" style="margin-top:12px;">
+    “깨진 쌀알이 하나도 없다”고 말하지 않겠습니다. 특등급에도 허용 상한이 있습니다. 겨리가 약속하는 것은 그 기준을 지키는 일입니다.
+  </p>
+  <!-- ⚠️ 싸라기 허용 상한 수치를 넣으려면 현행 농산물 표준규격(쌀)에서 직접 확인 후 인용할 것. 추정 인용 금지. -->
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     SECTION 04 · USP ② (패턴 B — 이미지 풀블리드 상단 + 텍스트 하단)
+     불만족 2위 = 묵은내 / 도정 후 경과 시간
+     ═══════════════════════════════════════════════════════════ -->
+<section class="pat-b" style="background:var(--sub-bg);">
+  <div class="ph full rv">
+    <svg viewBox="0 0 24 24"><path d="M7 2h2v2h6V2h2v2h2a1 1 0 0 1 1 1v15a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h2V2zm12 8H5v9h14v-9zm-8.6 1.9 1.4 1.4-3.5 3.5-2.2-2.2 1.4-1.4.8.8 2.1-2.1z"/></svg>
+    <p class="ph-main">[S04-STAMP · 필요한 이미지 교체]<br>포장에 찍힌 도정연월일 각인 실물</p>
+    <p class="ph-sub">권장 비율 16:10 · 최소 1600×1000px<br>촬영 방향 — 각인부 정면 접사, 숫자가 읽히게</p>
+  </div>
+  <div class="txt">
+    <p class="label rv d1">POINT 02 · 도정연월일</p>
+    <h2 class="h2 rv d1">며칠 전에 도정했는지<br>포장에 찍혀 있습니다</h2>
+    <p class="body rv d2">
+      완제품을 창고에 오래 두지 않습니다. 완제품 장기재고를 최소로 두고 <span class="pt">주문 후 도정</span>해 보냅니다.
+    </p>
+    <p class="body rv d2">
+      묵은내가 없다고 약속하는 대신, 도정일을 보이게 만들었습니다. 확인하고 사시면 됩니다.
+    </p>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     SECTION 05 · USP ③ (패턴 C — 이미지 배경 + 다크 오버레이 60%)
+     불만족 3위 = 스펙 불일치로 인한 배신감
+     ═══════════════════════════════════════════════════════════ -->
+<section class="pat-c">
+  <div class="bgph">
+    <svg viewBox="0 0 24 24" style="fill:#8E8578;"><path d="M12 2 4 5v6.1c0 4.6 3.2 8.9 8 10.9 4.8-2 8-6.3 8-10.9V5l-8-3zm0 2.2 6 2.2v4.7c0 3.6-2.4 7-6 8.7-3.6-1.7-6-5.1-6-8.7V6.4l6-2.2zm-1 9.4-2-2-1.4 1.4L11 16.4l5.4-5.4L15 9.6l-4 4z"/></svg>
+    <p class="ph-main" style="color:#6E665C;">[S05-LOT · 필요한 이미지 교체]<br>보관 시료 + 검사 기록서 · 로트번호 매칭</p>
+    <p class="ph-sub">권장 비율 4:5(세로) · 최소 1200×1500px<br>촬영 방향 — 로우앵글, 어두운 톤, 텍스트 여백 확보</p>
+  </div>
+  <div class="veil"></div>
+
+  <div class="inner">
+    <p class="label on-dark rv">POINT 03 · 동일 로트</p>
+    <h2 class="h2 rv d1">보내드린 그 로트를<br>그대로 남겨 둡니다</h2>
+    <p class="body rv d2">
+      고객께 나간 제품과 <span class="pt">같은 로트</span>의 시료를 보관하고, 검사 기록을 함께 남깁니다.
+    </p>
+    <p class="body rv d2">
+      확인해 달라고 요구하실 수 있어야, 표시된 스펙이 제 값을 합니다.
+    </p>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     SECTION 06 · 수치 · 증거 (전면 그라데이션 + 카운트업)
+     ⚠️ 여기 올라가는 숫자는 전부 검증 가능한 값만. 추정치 금지.
+     ═══════════════════════════════════════════════════════════ -->
+<section class="grad">
+  <p class="label rv">THE NUMBERS</p>
+  <h2 class="h2 rv d1">확인할 수 있는 것만<br>숫자로 적었습니다</h2>
+
+  <div class="stat rv d2">
+    <span class="grade">특등급</span>
+    <p>포장 표시 기준 — 법정 표시 항목입니다</p>
+  </div>
+
+  <div class="stat rv d2">
+    <span class="num" data-count="3590" data-comma="1">0</span><span class="num-unit">원 / kg</span>
+    <p>신동진 10kg 35,900원 기준 · 20kg는 kg당 3,295원</p>
+  </div>
+
+  <div class="stat rv d3">
+    <span class="num" data-count="100">0</span><span class="num-unit">%</span>
+    <p>판매 로트와 동일한 시료를 보관합니다</p>
+    <div class="bar"><i data-bar="100"></i></div>
+  </div>
+
+  <div class="stat rv d3">
+    <span class="num" data-count="1">0</span><span class="num-unit">일 단위 각인</span>
+    <p>포대마다 도정연월일이 찍혀 나갑니다</p>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     SECTION 07 · 비교표 (항목 / 흔한 표기 방식 / 겨리)
+     ⚠️ 특정 경쟁사·가격 비교 아님. 표시광고법 리스크 회피를 위해
+        '저가 구간에서 흔히 보이는 표기 방식'과만 비교한다.
+     ═══════════════════════════════════════════════════════════ -->
+<section style="background:var(--white);">
+  <p class="label rv">HOW WE DIFFER</p>
+  <h2 class="h2 rv d1">다른 건 가격이 아니라<br>확인 가능성입니다</h2>
+
+  <table class="cmp rv d2">
+    <thead>
+      <tr>
+        <th class="c-item"></th>
+        <th class="c-etc">흔한 표기 방식</th>
+        <th class="c-us">겨리<span class="badge">추천</span></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="c-item">등급</td>
+        <td class="c-etc">“특등급”이라고 쓰기만 함</td>
+        <td class="c-us">특등급 표시 + 등급이 무엇을 정한 기준인지 설명</td>
+      </tr>
+      <tr>
+        <td class="c-item">도정 시점</td>
+        <td class="c-etc">“도정일 최근”이라고만 안내</td>
+        <td class="c-us">포장에 도정연월일 각인 · 주문 후 도정</td>
+      </tr>
+      <tr>
+        <td class="c-item">판매 로트</td>
+        <td class="c-etc">구매자가 확인할 방법 없음</td>
+        <td class="c-us">판매 로트와 동일 시료 보관 · 검사 기록 유지</td>
+      </tr>
+      <tr>
+        <td class="c-item">완제품 재고</td>
+        <td class="c-etc">도정 후 보관 기간 비공개</td>
+        <td class="c-us">완제품 장기재고 최소 운영</td>
+      </tr>
+      <tr>
+        <td class="c-item">선별</td>
+        <td class="c-etc">기준 미표기</td>
+        <td class="c-us">싸라기 · 변색립 · 피해립 선별 공정</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p class="small rv d3" style="margin-top:16px;">
+    특정 판매자를 지목한 비교가 아니라, 저가 구간 상세페이지에서 흔히 쓰이는 표기 방식과의 비교입니다.
+  </p>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     SECTION 08 · 기대효과 타임라인 (긍정 VOC 인용)
+     ═══════════════════════════════════════════════════════════ -->
+<section style="background:var(--sub-bg);">
+  <p class="label rv">AFTER IT ARRIVES</p>
+  <h2 class="h2 rv d1">받으신 다음<br>이 순서로 확인해 보세요</h2>
+
+  <ul class="tl rv d2">
+    <li>
+      <p class="when">DAY 0 · 도착</p>
+      <p class="what">포대에 찍힌 도정연월일부터 봅니다</p>
+      <p class="said">주문일과 며칠 차이인지, 그 자리에서 확인하실 수 있습니다.</p>
+    </li>
+    <li class="hi">
+      <p class="when">DAY 0 · 첫 밥</p>
+      <p class="what">쌀을 씻을 때 물이 덜 탁합니다</p>
+      <p class="said">“도정일자가 최근이라서 찰지고 맛있어요”<br>“밥할때마다 밥향기에 취해요 ㅎㅎㅎ 밥도 맛잇고요”<br><span style="opacity:.6;font-size:12.5px;">— 실제 구매 후기</span></p>
+    </li>
+    <li>
+      <p class="when">DAY 14 · 남은 쌀</p>
+      <p class="what">2주 뒤 냄새가 올라오는지 확인해 주세요</p>
+      <p class="said">겨리가 기다리는 건 그 확인입니다. 그때 남는 후기가 저희가 가진 유일한 증거입니다.</p>
+    </li>
+  </ul>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     SECTION 09 · 리뷰 · 신뢰
+     ⚠️ 개시 전에는 실제 수집 리뷰가 없습니다. 아래 카드는 '배치 예시'이며
+        개시 후 실제 후기로 교체하기 전까지 노출하지 마세요.
+     ═══════════════════════════════════════════════════════════ -->
+<section style="background:var(--white);">
+  <p class="label rv">REVIEWS</p>
+  <h2 class="h2 rv d1">밥상에서<br>확인된 것만 싣습니다</h2>
+
+  <!-- 개시 전 제거용 안내 (실제 리뷰 교체 후 이 블록 삭제) -->
+  <p class="editnote rv d1">[S09-REVIEW · 실제 수집 리뷰 캡처로 교체] 아래 2건은 레이아웃 확인용 배치 예시입니다. 자사 리뷰가 아니면 노출하지 마세요.</p>
+
+  <div class="rev rv d2">
+    <p class="star">★★★★★</p>
+    <p>“도정일자가 최근이라서 찰지고 맛있어요”</p>
+    <p class="who">구매자 후기</p>
+  </div>
+  <div class="rev rv d2">
+    <p class="star">★★★★★</p>
+    <p>“밥할때마다 밥향기에 취해요 ㅎㅎㅎ 밥도 맛잇고요”</p>
+    <p class="who">구매자 후기</p>
+  </div>
+
+  <div class="trust rv d3">
+    <div><svg viewBox="0 0 24 24"><path d="M12 2 4 5v6.1c0 4.6 3.2 8.9 8 10.9 4.8-2 8-6.3 8-10.9V5l-8-3zm-1 13.4-3.4-3.4L9 10.6l2 2 4-4 1.4 1.4-5.4 5.4z"/></svg>특등급 · 포장 표시 기준</div>
+    <div><svg viewBox="0 0 24 24"><path d="M7 2h2v2h6V2h2v2h2a1 1 0 0 1 1 1v15a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h2V2zm12 8H5v9h14v-9z"/></svg>도정연월일 각인 발송</div>
+    <div><svg viewBox="0 0 24 24"><path d="M6 2h12a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1zm1 2v16h10V4H7zm2 3h6v2H9V7zm0 4h6v2H9v-2z"/></svg>판매 로트 동일 시료 보관</div>
+    <div><svg viewBox="0 0 24 24"><path d="M12 2c2.5 3 4 5.8 4 8.4A4 4 0 0 1 12 15a4 4 0 0 1-4-4.6C8 7.8 9.5 5 12 2zM4 18h16v2H4v-2z"/></svg>싸라기 · 변색립 · 피해립 선별</div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     SECTION 10 · 최종 CTA (가격 정당화 + 구매 버튼 + 긴급성)
+     ⚠️ '왜 이 가격인가'는 생략 금지 항목입니다.
+     ⚠️ 할인 전 정상가(취소선) 표기는 실제 판매 이력 2주 이후에만.
+     ═══════════════════════════════════════════════════════════ -->
+<section class="final" id="buy">
+  <p class="label rv">WHY THIS PRICE</p>
+  <h2 class="h2 rv d1">특등급인데 이 가격인<br>이유는 두 가지입니다</h2>
+
+  <div class="why rv d2">
+    <p>하나. 전주 산지에서 저희 도정 라인으로 <b>직접 도정</b>해 중간 유통을 거치지 않습니다.</p>
+    <p>둘. 포장을 <b>무지 포대에 라벨만</b> 붙여 단순하게 만들고, 그만큼 값을 낮췄습니다.</p>
+  </div>
+
+  <div class="buybox rv d2">
+    <p style="font-size:13px;font-weight:600;letter-spacing:-.01em;opacity:.6;margin:0 0 6px;">특등급 신동진 10kg</p>
+    <div class="pr">
+      <span class="num" data-count="35900" data-comma="1">0</span>
+      <span class="price-won">원</span>
+    </div>
+    <p class="note">kg당 3,590원 · 첫 구매 쿠폰 2,000원 적용 시 33,900원<br>20kg 65,900원 (kg당 3,295원)</p>
+    <a class="cta pulse" href="#" onclick="return false;">장바구니 담기</a>
+    <!-- ↑ 오픈마켓 등록 시 실제 구매 버튼으로 교체하거나, 이 블록을 삭제하세요. -->
+  </div>
+
+  <p class="body rv d3" style="text-align:center;">
+    가족 밥상에 올리기 전에, 포장에 찍힌 날짜부터 확인해 보세요.
+  </p>
+
+  <div class="timer rv d3">
+    <span>오늘 출고 마감까지</span><b id="cd">--:--:--</b>
+  </div>
+  <p class="small rv d3" style="text-align:center;margin-top:10px;color:rgba(255,255,255,.75);opacity:1;">
+    <!-- ⚠️ 출고 마감 시간(기본 15:00)과 주문→도정→출고 SOP 확정 후 문구를 고정하세요. -->
+    마감 시간 15:00 기준 · 실제 SOP 확정 후 수정 필요
+  </p>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     부록 · 상품정보제공고시 (전자상거래법 필수 표기 — 값 채워 넣을 것)
+     불필요하면 이 섹션 전체를 삭제하세요.
+     ═══════════════════════════════════════════════════════════ -->
+<section class="appx">
+  <p class="label">PRODUCT INFO</p>
+  <h2 class="h2" style="font-size:24px;margin-bottom:18px;">상품정보제공고시</h2>
+  <table>
+    <tr><th>품목 · 품종</th><td>쌀(백미) · 신동진</td></tr>
+    <tr><th>등급</th><td>특등급</td></tr>
+    <tr><th>중량</th><td>10kg (20kg 별도 SKU)</td></tr>
+    <tr><th>생산연도</th><td class="fill">[확정 후 기재 — 2025년산 / 2026년산]</td></tr>
+    <tr><th>도정연월일</th><td>포장 각인 표시</td></tr>
+    <tr><th>생산자 · 판매원</th><td class="fill">[주식회사 농업법인 겨리 · 상세 기재]</td></tr>
+    <tr><th>원산지</th><td>국내산 (전북 전주)</td></tr>
+    <tr><th>소비자상담</th><td class="fill">[연락처 기재]</td></tr>
+  </table>
+  <p class="small" style="margin-top:16px;">
+    생산연도와 등급은 법정 표시 항목입니다. 개시 전 검사성적서로 확인한 값만 기재하세요.
+  </p>
+</section>
+
+</div><!-- /.wrap -->
+
+<script>
+/* ═══════════════════════════════════════════
+   스크롤 리빌 · 수치 카운트업 · 프로그레스 바
+   ═══════════════════════════════════════════ */
+(function(){
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  function comma(n){ return n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ','); }
+
+  function countUp(el){
+    var target = parseFloat(el.getAttribute('data-count')) || 0;
+    var useComma = el.getAttribute('data-comma') === '1';
+    if(reduce){ el.textContent = useComma ? comma(target) : target; return; }
+    var dur = 1500, t0 = null;
+    function step(ts){
+      if(!t0) t0 = ts;
+      var p = Math.min((ts - t0) / dur, 1);
+      var eased = 1 - Math.pow(1 - p, 3);            /* ease-out cubic */
+      var v = Math.round(target * eased);
+      el.textContent = useComma ? comma(v) : v;
+      if(p < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(!e.isIntersecting) return;
+      var el = e.target;
+      el.classList.add('on');
+
+      el.querySelectorAll('[data-count]').forEach(function(n){
+        if(!n.dataset.done){ n.dataset.done = '1'; countUp(n); }
+      });
+      el.querySelectorAll('[data-bar]').forEach(function(b){
+        if(!b.dataset.done){ b.dataset.done = '1';
+          setTimeout(function(){ b.style.width = b.getAttribute('data-bar') + '%'; }, 120);
+        }
+      });
+      io.unobserve(el);
+    });
+  }, { threshold: 0.18, rootMargin: '0px 0px -8% 0px' });
+
+  document.querySelectorAll('.rv').forEach(function(el){ io.observe(el); });
+
+  /* 히어로는 즉시 노출 */
+  document.querySelectorAll('.hero .rv').forEach(function(el){
+    el.classList.add('on');
+    el.querySelectorAll('[data-count]').forEach(function(n){
+      if(!n.dataset.done){ n.dataset.done = '1'; countUp(n); }
+    });
+  });
+
+  /* ── 출고 마감 카운트다운 (기본 15:00) ── */
+  var CUTOFF_HOUR = 15, CUTOFF_MIN = 0;
+  var cd = document.getElementById('cd');
+  function tick(){
+    if(!cd) return;
+    var now = new Date();
+    var end = new Date(now.getFullYear(), now.getMonth(), now.getDate(), CUTOFF_HOUR, CUTOFF_MIN, 0);
+    if(end <= now) end.setDate(end.getDate() + 1);
+    var d = Math.floor((end - now) / 1000);
+    var h = String(Math.floor(d / 3600)).padStart(2,'0');
+    var m = String(Math.floor(d % 3600 / 60)).padStart(2,'0');
+    var s = String(d % 60).padStart(2,'0');
+    cd.textContent = h + ':' + m + ':' + s;
+  }
+  tick(); setInterval(tick, 1000);
+})();
+</script>
+</body>
+</html>
