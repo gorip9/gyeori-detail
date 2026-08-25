@@ -36,6 +36,8 @@
   --line:#E5DED0;
   --legal:#7A7167;
   --grad:linear-gradient(135deg,#6A7842 0%,#C49445 100%);
+  --olive-l:#B7C98A;      /* 히어로 전용 — 웜톤 배경에서 골드가 묻히므로 강조를 올리브로 */
+  --ivory:#F7F3EA;
 
   --ph-bg:#EEE9DF; --ph-tx:#6E665C; --ph-ic:#6A7842; --ph-sub:#7A7167; --ph-bd:#B8AE9E;
 
@@ -113,44 +115,43 @@ section{padding:104px 44px;position:relative;}
 @media (prefers-reduced-motion:reduce){ .rv{opacity:1;transform:none;transition:none;} }
 .no-js .rv{opacity:1;transform:none;}
 
-/* ══════════ 01 · 히어로 — GIF 풀블리드 배너 ══════════ */
+/* ══════════ 01 · 히어로 — GIF 풀블리드 배너 (B안 · 텍스트 세이프존 분리) ══════════ */
 .hero{
-  min-height:1180px;display:flex;flex-direction:column;justify-content:flex-end;
-  padding:110px 44px 76px;background:#17130F;color:#fff;overflow:hidden;
+  height:1400px;position:relative;overflow:hidden;background:#0E0B08;color:#fff;padding:0;
 }
-@media (max-width:400px){ .hero{padding:80px 20px 52px;} }
-/* GIF가 들어갈 자리 — 배경 전면 */
+/* GIF가 들어갈 자리 — 상단 정렬(하단 500px는 텍스트 세이프존이므로 사진을 걸치지 않는다) */
 .hero .gif{
-  position:absolute;inset:0;background:#1E1913;
-  border:2px dashed rgba(196,148,69,.55);
+  position:absolute;left:0;right:0;top:0;height:900px;background:#1E1913;
+  border:2px dashed rgba(183,201,138,.5);
   display:flex;flex-direction:column;align-items:center;justify-content:flex-start;
-  gap:12px;text-align:center;padding:70px 26px 26px;
+  gap:12px;text-align:center;padding:60px 26px 26px;
 }
-.hero .gif svg{width:34px;height:34px;fill:var(--point);}
-.hero .gif .ph-main{color:#E7C88E;font-size:13.5px;font-weight:700;line-height:1.6;}
-.hero .gif .ph-sub{color:rgba(231,200,142,.62);font-size:12px;line-height:1.7;}
-.hero .veil{position:absolute;inset:0;
-  background:linear-gradient(180deg,rgba(15,12,9,.55) 0%,rgba(15,12,9,.35) 38%,rgba(15,12,9,.88) 100%);}
-.hero .inner{position:relative;z-index:2;}
+.hero .gif svg{width:34px;height:34px;fill:var(--olive-l);}
+.hero .gif .ph-main{color:#D6E3B4;font-size:13.5px;font-weight:700;line-height:1.6;}
+.hero .gif .ph-sub{color:rgba(214,227,180,.6);font-size:12px;line-height:1.7;}
+/* ① 하단 스크림 — 사진을 아래로 갈수록 완전한 검정으로 떨어뜨린다 */
+.hero .fade{position:absolute;left:0;right:0;top:430px;height:600px;
+  background:linear-gradient(180deg,rgba(14,11,8,0) 0%,rgba(14,11,8,.55) 42%,rgba(14,11,8,.94) 78%,#0E0B08 100%);}
+/* ② 좌측 그라데이션 — 좌측 정렬 텍스트가 사진에 걸쳐도 대비 확보 */
+.hero .sidefade{position:absolute;left:0;top:0;bottom:0;width:66%;
+  background:linear-gradient(90deg,rgba(14,11,8,.62) 0%,rgba(14,11,8,.28) 55%,rgba(14,11,8,0) 100%);}
+/* ③ 비네팅 — 시선을 중앙 밥그릇으로 모은다 */
+.hero .vig{position:absolute;inset:0;
+  background:radial-gradient(120% 62% at 50% 26%,rgba(0,0,0,0) 40%,rgba(0,0,0,.5) 100%);}
+
+.hero .inner{position:absolute;left:44px;right:44px;bottom:76px;z-index:2;}
 .hero .badge{margin-bottom:22px;}
-.hero .h1{color:#fff;text-shadow:0 2px 18px rgba(0,0,0,.5);}
-.hero-sub{font-size:19px;font-weight:500;line-height:1.75;letter-spacing:-.02em;
-  margin:0 0 26px;color:rgba(255,255,255,.86);}
-.hero-desc{font-size:15.5px;line-height:1.8;letter-spacing:-.01em;margin:0 0 6px;color:rgba(255,255,255,.62);}
+.hero .h1{color:var(--ivory);text-shadow:0 2px 30px rgba(0,0,0,.75);margin-bottom:24px;}
+.hero .rule{background:var(--olive-l);margin-bottom:24px;}
+.hero-sub{font-size:21px;font-weight:500;line-height:1.65;letter-spacing:-.02em;
+  margin:0 0 22px;color:rgba(247,243,234,.92);}
+.hero-sub .pt{color:var(--olive-l);font-weight:700;}
+.hero-desc{font-size:16px;line-height:1.85;letter-spacing:-.01em;margin:0 0 4px;color:rgba(247,243,234,.6);}
 
-.price{display:flex;align-items:baseline;gap:7px;margin:22px 0 4px;}
-.price .bignum{font-size:clamp(66px,10vw,86px);color:#fff;}
-.price .won{font-family:var(--fs);font-size:19px;font-weight:700;letter-spacing:-.03em;color:#fff;}
-.kgline{font-size:13.5px;font-weight:500;letter-spacing:-.01em;color:rgba(255,255,255,.55);margin:0 0 28px;}
-
-.cta{
-  display:block;width:100%;text-align:center;text-decoration:none;box-sizing:border-box;
-  background:var(--point);color:#fff;font-family:var(--fs);
-  font-size:17px;font-weight:700;letter-spacing:-.02em;
-  padding:20px;border-radius:6px;border:0;cursor:pointer;
-  box-shadow:0 6px 20px rgba(196,148,69,.34);
-}
-.scroll-hint{margin:22px auto 0;font-size:11px;letter-spacing:.14em;color:rgba(255,255,255,.45);text-align:center;}
+.price{display:flex;align-items:flex-end;gap:9px;margin:26px 0 0;}
+.price .bignum{font-size:92px;line-height:.82;color:var(--ivory);}
+.price .won{font-family:var(--fs);font-size:21px;font-weight:700;letter-spacing:-.03em;color:var(--ivory);padding-bottom:6px;}
+.kgline{font-size:15px;font-weight:500;letter-spacing:-.01em;color:rgba(247,243,234,.5);margin:10px 0 0;}
 
 /* ══════════ 02 · 문제 공감 (다크) ══════════ */
 .dark{background:var(--dark);color:#E6E0D5;}
@@ -164,6 +165,23 @@ section{padding:104px 44px;position:relative;}
 /* ══════════ 패턴 A — 텍스트 좌 + 이미지 우 (50:50) ══════════ */
 .pat-a{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:center;}
 @media (max-width:479px){ .pat-a{grid-template-columns:1fr;gap:26px;} }
+
+/* ══════════ 03 · 실사 배치 — 와이드 1컷 + 공정 3컷 ══════════ */
+.shot{margin:0;}
+.shot img{width:100%;display:block;border-radius:12px;}
+.shot figcaption{font-size:13px;line-height:1.7;color:var(--text);opacity:.5;margin:12px 0 0;}
+
+.proc{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:0;}
+@media (max-width:479px){ .proc{grid-template-columns:1fr;gap:24px;} }
+.proc figure{margin:0;}
+.proc img{width:100%;aspect-ratio:1/1;object-fit:cover;display:block;border-radius:10px;}
+.proc .step{font-family:var(--fs);font-size:11px;font-weight:600;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--main);margin:13px 0 5px;}
+.proc .name{font-size:16px;font-weight:700;letter-spacing:-.02em;margin:0 0 6px;}
+.proc .what{font-size:13.5px;line-height:1.7;color:var(--text);opacity:.62;margin:0;}
+.flow{display:flex;align-items:center;gap:10px;margin:0 0 18px;}
+.flow span{font-family:var(--fs);font-size:12.5px;font-weight:600;letter-spacing:-.01em;color:var(--main);}
+.flow i{flex:1;height:1px;background:var(--line);}
 
 /* ══════════ 패턴 B — 이미지 풀블리드 상단 + 텍스트 하단 ══════════ */
 .pat-b{padding-left:0;padding-right:0;}
@@ -273,12 +291,14 @@ section{padding:104px 44px;position:relative;}
     <svg viewBox="0 0 24 24"><path d="M4 4h16a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1zm1 2v12h14V6H5zm5 2.4 5.2 3.6L10 15.6V8.4z"/></svg>
     <p class="ph-main">[ S01-HERO · GIF 교체 ]<br>어두운 배경에서 김이 모락모락 피어나는 연출<br>갓 지은 윤기 나는 밥 씨즐 컷 (GIF · 루프)</p>
     <p class="ph-sub">
-      권장 9:16 세로 풀화면 · 최소 1080×1920px<br>
-      2~3초 루프 · 5MB 이하 · 하단 40%는 텍스트 영역이므로 어둡게<br>
-      측광·역광으로 김과 밥알 윤기를 살릴 것
+      권장 860×900 (16:17) · 최소 1720×1800px<br>
+      2~3초 루프 · 5MB 이하 · <b>피사체를 프레임 위쪽 2/3에 배치</b><br>
+      하단 500px는 텍스트 세이프존 — 사진이 걸치지 않게
     </p>
   </div>
-  <div class="veil"></div>
+  <div class="fade"></div>
+  <div class="sidefade"></div>
+  <div class="vig"></div>
 
   <div class="inner">
     <span class="badge rv">신동진 단일품종 · 10kg</span>
@@ -297,9 +317,6 @@ section{padding:104px 44px;position:relative;}
       <span class="won">원</span>
     </div>
     <p class="kgline rv d3">kg당 3,590원 · 전북 전주 산지 도정</p>
-
-    <a class="cta pulse rv d3" href="#buy">구매하기</a>
-    <p class="scroll-hint rv d3">SCROLL</p>
   </div>
 </section>
 
@@ -339,27 +356,55 @@ section{padding:104px 44px;position:relative;}
 
 
 <!-- ══════════════════════════════════════════════════════════════
-     SECTION 03 · DESIRE ① · 패턴 A (텍스트 좌 + 이미지 우 50:50)
-     USP 01 · CURATION — 어설픈 직접 도정 대신 검증된 인프라
+     SECTION 03 · DESIRE ① — 실사 배치 (와이드 1컷 + 공정 3컷)
+     USP 01 · CURATION — 자체 도정 대신 검증된 인프라
+     ⚠️ 사진 4장 모두 실제 소싱처 설비여야 합니다.
+        다른 시설 사진을 쓰면 이 섹션 전체가 허위 표시가 됩니다.
      ══════════════════════════════════════════════════════════════ -->
 <section style="background:var(--white);">
-  <div class="pat-a">
-    <div>
-      <p class="label rv">Point 01 · Curation</p>
-      <h2 class="h2 rv d1">자체 도정 대신<br>검증된 인프라</h2>
-    </div>
-    <div class="ph r-11 rv d2">
-      <svg viewBox="0 0 24 24"><path d="M3 20V9l6-4 6 4v11h6v2H1v-2h2zm2 0h8V10.1L9 7.4 5 10.1V20zm12 0h2v-8.6l-2-1.3V20z"/></svg>
-      <p class="ph-main">[ S03-RPC · 필요한 이미지 교체 ]<br>대형 미곡처리장 전경 또는 도정 라인 와이드 샷</p>
-      <p class="ph-sub">권장 1:1 · 최소 1200×1200px<br>광각 · 설비 스케일이 보이게</p>
-    </div>
-  </div>
+  <p class="label rv">Point 01 · Curation</p>
+  <h2 class="h2 rv d1">자체 도정 대신<br>검증된 인프라</h2>
 
-  <p class="body rv d3" style="margin-top:26px;">
+  <p class="body rv d1" style="margin-bottom:30px;">
     소규모 정미소를 급히 차리는 대신, 규모와 공정이 <span class="pt">검증된 도정 인프라</span>를 골라
     정식으로 소싱했습니다.
   </p>
-  <p class="body rv d3">
+
+  <figure class="shot rv d2">
+    <img src="./photo/S03-main.jpg" alt="겨리 쌀이 도정되는 라인 전경 — 정미 설비, 저장 사일로, 포장 구역">
+    <figcaption>겨리 쌀이 지나가는 라인입니다. 도정 설비와 저장 사일로, 포장 구역이 한 건물 안에 이어져 있습니다.</figcaption>
+  </figure>
+
+  <p class="body rv d3" style="margin:36px 0 22px;">
+    벼는 이 안에서 세 단계를 지나 백미가 됩니다. 어느 한 곳만 잘해서는 밥맛이 나오지 않습니다.
+  </p>
+
+  <div class="flow rv d3">
+    <span>건조</span><i></i><span>정백</span><i></i><span>선별</span>
+  </div>
+
+  <div class="proc rv d3">
+    <figure>
+      <img src="./photo/S03-1-dry.jpg" alt="원적외선 곡물건조기가 늘어선 건조동">
+      <p class="step">Step 01</p>
+      <p class="name">건조</p>
+      <p class="what">벼의 수분을 천천히 맞춥니다. 급하게 말리면 쌀알에 금이 가고, 그 금이 나중에 싸라기가 됩니다.</p>
+    </figure>
+    <figure>
+      <img src="./photo/S03-2-mill.jpg" alt="정백부 — 겉껍질과 쌀겨를 벗겨내는 정미 설비">
+      <p class="step">Step 02</p>
+      <p class="name">정백</p>
+      <p class="what">겉껍질과 쌀겨를 벗겨 백미로 만듭니다. 이 압력이 세면 쌀이 부서지고 약하면 겨가 남습니다.</p>
+    </figure>
+    <figure>
+      <img src="./photo/S03-3-sort.jpg" alt="정미선별부 — 싸라기와 결점립을 걸러내는 선별 설비">
+      <p class="step">Step 03</p>
+      <p class="name">선별</p>
+      <p class="what">밥맛을 무너뜨리는 것들을 걸러냅니다. 어떻게 걸러내는지는 다음 장에서 보여드립니다.</p>
+    </figure>
+  </div>
+
+  <p class="body rv d3" style="margin-top:34px;">
     좋은 쌀을 만드는 일과 좋은 쌀을 골라내는 일은 다릅니다. 겨리가 하는 건 후자입니다.
   </p>
 </section>
@@ -398,7 +443,9 @@ section{padding:104px 44px;position:relative;}
     <p class="ph-main">[ S05-FRESH · 필요한 이미지 교체 ]<br>출고 라인 · 오늘 날짜가 찍힌 포대가 쌓인 모습</p>
     <p class="ph-sub">권장 4:5(세로) · 최소 1200×1500px<br>로우앵글 · 어두운 톤 · 상단 55%는 텍스트 영역이므로 여백 확보</p>
   </div>
-  <div class="veil"></div>
+  <div class="fade"></div>
+  <div class="sidefade"></div>
+  <div class="vig"></div>
 
   <div class="inner">
     <p class="label on-dark rv">Point 03 · Freshness</p>
