@@ -537,8 +537,6 @@
       position: relative;
       display: grid;
       place-items: center;
-      padding: 16px;
-      overflow: hidden;
       background:
         radial-gradient(circle at 50% 42%, rgba(255,255,255,.95), transparent 32%),
         linear-gradient(155deg, #eee5d6, #f9f5eb);
@@ -1065,7 +1063,8 @@
     .compare-layout{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(320px,.65fr);gap:28px;align-items:stretch}
     .compare-table-wrap{overflow-x:auto;border:1px solid var(--border);border-radius:22px;background:var(--card)}
     .compare-table{width:100%;min-width:660px;border-collapse:collapse;table-layout:fixed}.compare-table th,.compare-table td{padding:22px 20px;border-bottom:1px solid #e7ddcd;vertical-align:top;text-align:left}.compare-table thead th{background:var(--primary);color:#fff;font-size:14px;font-weight:850}.compare-table thead th:first-child{width:28%}.compare-table tbody th{color:var(--primary);font-size:14px}.compare-table td strong{display:block;margin-bottom:3px;color:var(--primary);font-size:17px}.compare-table td>span:not(.test-pending){display:block;color:var(--text-sub);font-size:13px}.compare-table tr:last-child th,.compare-table tr:last-child td{border-bottom:0}.test-pending{display:inline-flex;padding:7px 10px;border-radius:999px;background:var(--bg);color:var(--text-sub);font-size:12px;line-height:1.35}
-    .match-guide{display:grid;gap:14px}.match-card{padding:26px;border:1px solid var(--border);border-radius:20px;background:var(--card)}.match-card--green{background:#eef0e5;border-color:#ccd2ba}.match-kicker{color:var(--primary-light);font-size:11px;font-weight:900;letter-spacing:.12em}.match-card h3{margin:7px 0 8px;color:var(--primary);font-family:var(--serif);font-size:28px}.match-card p{color:var(--text-sub);font-size:14px;line-height:1.7}.compare-note{margin:2px 2px 0;color:var(--text-light);font-size:12px;line-height:1.65}
+    .match-guide{display:grid;gap:14px}.match-card{padding:26px;border:1px solid var(--border);border-radius:20px;background:var(--card)}.match-card--green{background:#eef0e5;border-color:#ccd2ba}.match-kicker{color:var(--primary-light);font-size:11px;font-weight:900;letter-spacing:.12em}.match-card h4{margin:7px 0 8px;color:var(--primary);font-family:var(--serif);font-size:28px;}.match-card p{color:var(--text-sub);font-size:14px;line-height:1.7}.compare-note{margin:2px 2px 0;color:var(--text-light);font-size:12px;line-height:1.65}
+    .match-heading{margin-top:48px;margin-bottom:24px;max-width:680px;}.match-heading .eyebrow{margin-bottom:10px;}.match-heading h3{margin:0 0 10px;color:var(--primary);font-family:var(--serif);font-size:clamp(26px, 3vw, 34px);line-height:1.35;}.match-heading>p:last-child{margin:0;color:var(--text-sub);font-size:15px;line-height:1.7;}
     .review-summary{margin-bottom:22px;padding:25px 28px;display:flex;justify-content:space-between;gap:24px;align-items:center;border:1px solid var(--border);border-radius:18px;background:var(--bg)}.review-summary-label{display:block;margin-bottom:5px;color:var(--primary-light);font-size:11px;font-weight:900;letter-spacing:.13em}.review-count{color:var(--primary);font-size:19px}.review-summary p{max-width:470px;margin:0;color:var(--text-sub);font-size:13px;text-align:right}.review-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.review-card{min-height:230px;padding:28px;border:1px solid var(--border);border-radius:20px;background:var(--card);box-shadow:0 10px 28px rgba(70,55,35,.04)}.review-stars{color:#9b7a31;font-size:14px;letter-spacing:.12em}.review-placeholder{margin:22px 0 28px;color:var(--text);font-family:var(--serif);font-size:18px;line-height:1.7}.review-meta{display:flex;justify-content:space-between;gap:14px;color:var(--text-light);font-size:12px}.review-legal-note{margin:16px 0 0;color:var(--text-light);font-size:12px;text-align:center}
     .market-buttons{grid-template-columns:1fr}.market-choice{position:relative;min-height:88px;padding:20px 54px 18px 18px;display:grid;gap:2px;align-content:center;border:1px solid var(--border);border-radius:16px;background:#fff;transition:.22s ease}.market-choice:hover{transform:translateY(-2px);border-color:var(--primary);box-shadow:0 12px 28px rgba(47,62,22,.08)}.market-choice strong{color:var(--primary);font-size:16px}.market-choice small{color:var(--text-sub);font-size:12px}.benefit-badge{width:fit-content;margin-bottom:4px;padding:4px 8px;border-radius:999px;background:#eef0e5;color:var(--primary);font-size:10px;font-weight:900}.market-arrow{position:absolute;right:20px;top:50%;transform:translateY(-50%);color:var(--primary);font-size:20px}.benefit-note{margin:12px 0 0;color:var(--text-light);font-size:11px;line-height:1.55}
     .lead-section{padding:0 0 90px;background:var(--card)}.lead-box{padding:48px 52px;display:grid;grid-template-columns:1fr auto;gap:36px;align-items:center;border:1px solid var(--border);border-radius:28px;background:radial-gradient(circle at 88% 10%,rgba(122,139,90,.12),transparent 28%),var(--bg)}.lead-copy h2{margin-bottom:12px;font-size:clamp(30px,4vw,42px)}.lead-copy p:last-child{max-width:680px;margin-bottom:0;color:var(--text-sub)}.channel-cta{min-width:275px;min-height:74px;padding:14px 18px;display:grid;grid-template-columns:42px 1fr auto;gap:12px;align-items:center;border-radius:16px;background:#FEE500;color:#191919;box-shadow:0 12px 30px rgba(74,62,10,.12);transition:.22s ease}.channel-cta:hover{transform:translateY(-2px)}.channel-dot,.channel-float-icon{display:grid;place-items:center;border-radius:50%;background:#191919;color:#FEE500;font-weight:900}.channel-dot{width:42px;height:42px}.channel-cta strong,.channel-cta small{display:block}.channel-cta small{margin-top:2px;color:rgba(25,25,25,.66);font-size:11px}.channel-float{position:fixed;right:24px;bottom:24px;z-index:998;min-height:58px;padding:8px 16px 8px 9px;display:flex;gap:9px;align-items:center;border-radius:999px;background:#FEE500;color:#191919;box-shadow:0 14px 34px rgba(38,32,8,.18)}.channel-float-icon{width:40px;height:40px;flex:0 0 40px}.channel-float-copy{font-size:10px;line-height:1.25}.channel-float-copy strong{font-size:12px}
@@ -1217,7 +1216,10 @@
       .footer-grid { grid-template-columns: 1fr; gap: 36px; }
 
       .mobile-fixed-cta {
-        display: block;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) 58px;
+        gap: 8px;
+
         position: fixed;
         left: 16px;
         right: 16px;
@@ -1228,6 +1230,24 @@
         width: 100%;
         min-height: 58px;
         box-shadow: 0 16px 34px rgba(36,49,17,.30);
+      }
+
+      .mobile-chat-btn {
+        width: 58px;
+        height: 58px;
+
+        display: grid;
+        place-items: center;
+
+        border: 1px solid var(--border);
+        border-radius: 50%;
+
+        background: var(--card);
+        color: var(--primary);
+
+        box-shadow: 0 12px 28px rgba(36, 49, 17, .18);
+
+        cursor: pointer;
       }
     }
 
@@ -1414,16 +1434,22 @@
             </table>
           </div>
         </div><br>
+        <div class="match-heading" data-reveal>
+          <p class="eyebrow">취향으로 고르기</p>
+          <h3>좋아하는 밥의 느낌으로 골라보세요.</h3>
+          <p>평소 선호하는 밥맛에 가까운 품종을 살펴보세요.</p>
+        </div>
         
         <div class="match-guide">
           <div class="match-card match-card--green">
             <span class="match-kicker">이런 밥을 좋아한다면</span>
-            <h3>새청무</h3><p>매일 먹는 집밥에서 한쪽으로 치우치지 않은 편안한 균형감을 중요하게 본다면 먼저 살펴보세요.</p>
+            <h4>새청무</h4>
+            <p>매일 먹는 집밥에서 한쪽으로 치우치지 않은 편안한 균형감을 중요하게 본다면 먼저 살펴보세요.</p>
             <a href="#buy-saechungmu" class="text-link">새청무 구매처 보기 →</a>
           </div>
           <div class="match-card">
             <span class="match-kicker">이런 밥을 좋아한다면</span>
-            <h3>친들</h3><p>깔끔하고 담백한 인상의 밥맛을 선호한다면 먼저 살펴보세요.</p>
+            <h4>친들</h4><p>깔끔하고 담백한 인상의 밥맛을 선호한다면 먼저 살펴보세요.</p>
             <a href="#buy-chindeul" class="text-link">친들 구매처 보기 →</a></div>
         </div>
       </div>
@@ -1685,7 +1711,7 @@
       <div class="container">
         <div class="lead-box" data-reveal>
           <div class="lead-copy"><p class="eyebrow">겨리 소식 받기</p><h2 id="follow-title">지금 사지 않아도,<br>햅쌀 소식은 놓치지 마세요.</h2></div>
-          <a class="chaneltalk-cta chanel-link" href="#" data-placeholder="true"><span class="chanel-dot">K</span><span><strong>채널톡 채널 추가</strong><small>햅쌀 소식 · 할인 안내 받기</small></span><span>→</span></a>
+          <a class="channel-cta chanel-link" href="#" data-placeholder="true"><span class="kakao-dot"></span><span><strong>채널 추가</strong><small>햅쌀 소식 · 할인 안내 받기</small></span><span>→</span></a>
         </div>
       </div>
     </section>
@@ -1732,16 +1758,24 @@
     </div>
   </footer>
 
-  <!--<a class="channel-float channel-link" href="https://jvqjv.channel.io" data-placeholder="" aria-label="겨리 채널톡 추가">
-    <span class="channel-float-icon">K</span>
-    <span class="channel-float-copy">
-      햅쌀 소식<br>
-      <strong>채널톡 받기</strong>
-    </span>
-  </a>-->
-
   <div class="mobile-fixed-cta">
-    <a class="btn btn-primary" href="#buy">겨리 쌀 구매하기</a>
+    <a class="btn btn-primary mobile-buy-button" href="#buy">겨리 쌀 구매하기</a>
+    <button class="mobile-chat-btn" type="button" aria-label="채널톡 상담 열기">
+      <svg
+        viewBox="0 0 24 24"
+        width="24"
+        height="24"
+        fill="none"
+        aria-hidden="true"
+      >
+      <path
+        d="M5 5.5h14v10H9l-4 3v-13Z"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linejoin="round"
+        /path>
+      </svg>
+    </button>
   </div>
 
   <script>
@@ -1749,7 +1783,20 @@
 
       ChannelIO('boot', {
         "pluginKey": "0e3c36c9-62df-45f4-8967-85dadb1e8f47"
-        });
+      });
+
+      const channelButtonMedia = window.matchMedia('(max-width: 767px)');
+      function updateChannelButton() {
+        if (channelButtonMedia.matches) {
+          ChannelIO('hideChannelButton');
+        } else {
+        ChannelIO('showChannelButton');
+        }
+      }
+
+      updateChannelButton();
+
+      channelButtonMedia.addEventListener('change', updateChannelButton);
     
     (() => {
       const mobileMenuButton = document.querySelector('.mobile-menu-button');
@@ -1804,7 +1851,7 @@
 
           if (link.dataset.placeholder === 'true') {
             event.preventDefault();
-            alert('실제 판매처 URL을 입력한 뒤 사용해주세요.');
+            alert('현재 오픈 준비 중 입니다.');
           }
         });
       });
