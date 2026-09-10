@@ -847,9 +847,9 @@
       display: grid;
       align-items: end;
       background:
-        linear-gradient(180deg, rgba(30,42,12,.05), rgba(30,42,12,.82)),
-        radial-gradient(circle at 30% 25%, rgba(255,247,223,.55), transparent 25%),
-        linear-gradient(155deg, #a9b08d 0%, #7c8860 38%, #394821 100%);
+        linear-gradient(180deg, rgba(30, 42, 12, 0.06) 0%, rgba(30, 42, 12, 0.24) 50%, rgba(30, 42, 12, 0.72) 100%),
+        radial-gradient(circle at 24% 28%, rgba(255,247,223,.25) 0%, rgba(255, 247, 223, 0.08) 28%, transparent 55%),
+        linear-gradient(135deg, #7f8967 0%, #596842 42%, #2f421b 100%);
       box-shadow: var(--shadow);
     }
 
@@ -858,10 +858,32 @@
       position: absolute;
       inset: 0;
       background:
-        linear-gradient(12deg, transparent 0 46%, rgba(246,241,230,.14) 47% 48%, transparent 49%),
-        linear-gradient(-14deg, transparent 0 55%, rgba(246,241,230,.11) 56% 57%, transparent 58%),
-        repeating-linear-gradient(0deg, rgba(255,255,255,.02) 0 2px, transparent 2px 12px);
-      opacity: .85;
+        linear-gradient(0deg, rgba(255, 255, 255, 0.018) 0 1px, transparent 1px 11px);
+
+      opacity: .45;
+    }
+
+    .story-shell:after {
+      content: "";
+      position: absolute;
+
+      right: 1%;
+      top: 45%;
+      transform: translateY(-50%);
+
+      width: 44%;
+      height: 68%;
+
+      background-image: url("images/brand_story.webp");
+      background-repeat: no-repeat;
+      background-position: center right;
+      background-size: contain;
+
+      filter: brightness(0) invert(1);
+      opacity: 0.11;
+
+      pointer-events: none;
+      z-index: 1;
     }
 
     .story-copy {
@@ -1062,11 +1084,11 @@
     .hero-sizzle{max-width:580px;margin:-6px 0 28px;padding-left:16px;border-left:2px solid var(--border);color:#5f594d;font-family:var(--serif);font-size:15px;line-height:1.8}
     .compare-layout{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(320px,.65fr);gap:28px;align-items:stretch}
     .compare-table-wrap{overflow-x:auto;border:1px solid var(--border);border-radius:22px;background:var(--card)}
-    .compare-table{width:100%;min-width:660px;border-collapse:collapse;table-layout:fixed}.compare-table th,.compare-table td{padding:22px 20px;border-bottom:1px solid #e7ddcd;vertical-align:top;text-align:left}.compare-table thead th{background:var(--primary);color:#fff;font-size:14px;font-weight:850}.compare-table thead th:first-child{width:28%}.compare-table tbody th{color:var(--primary);font-size:14px}.compare-table td strong{display:block;margin-bottom:3px;color:var(--primary);font-size:17px}.compare-table td>span:not(.test-pending){display:block;color:var(--text-sub);font-size:13px}.compare-table tr:last-child th,.compare-table tr:last-child td{border-bottom:0}.test-pending{display:inline-flex;padding:7px 10px;border-radius:999px;background:var(--bg);color:var(--text-sub);font-size:12px;line-height:1.35}
+    .compare-table{width:100%;min-width:660px;border-collapse:collapse;table-layout:fixed}.compare-table th,.compare-table td{padding:16px 18px;border-bottom:1px solid #e7ddcd;vertical-align:top;text-align:left}.compare-table thead th{background:var(--primary);color:#fff;font-size:14px;font-weight:850}.compare-table thead th:first-child{width:28%}.compare-table tbody th{color:var(--primary);font-size:14px}.compare-table td strong{display:block;margin-bottom:3px;color:var(--primary);font-size:17px}.compare-table td>span:not(.test-pending){display:block;color:var(--text-sub);font-size:13px}.compare-table tr:last-child th,.compare-table tr:last-child td{border-bottom:0}.test-pending{display:inline-flex;padding:7px 10px;border-radius:999px;background:var(--bg);color:var(--text-sub);font-size:12px;line-height:1.35}
     .match-guide{display:grid;gap:14px}.match-card{padding:26px;border:1px solid var(--border);border-radius:20px;background:var(--card)}.match-card--green{background:#eef0e5;border-color:#ccd2ba}.match-kicker{color:var(--primary-light);font-size:11px;font-weight:900;letter-spacing:.12em}.match-card h4{margin:7px 0 8px;color:var(--primary);font-family:var(--serif);font-size:28px;}.match-card p{color:var(--text-sub);font-size:14px;line-height:1.7}.compare-note{margin:2px 2px 0;color:var(--text-light);font-size:12px;line-height:1.65}
     .match-heading{margin-top:48px;margin-bottom:24px;max-width:680px;}.match-heading .eyebrow{margin-bottom:10px;}.match-heading h3{margin:0 0 10px;color:var(--primary);font-family:var(--serif);font-size:clamp(26px, 3vw, 34px);line-height:1.35;}.match-heading>p:last-child{margin:0;color:var(--text-sub);font-size:15px;line-height:1.7;}
     .review-summary{margin-bottom:22px;padding:25px 28px;display:flex;justify-content:space-between;gap:24px;align-items:center;border:1px solid var(--border);border-radius:18px;background:var(--bg)}.review-summary-label{display:block;margin-bottom:5px;color:var(--primary-light);font-size:11px;font-weight:900;letter-spacing:.13em}.review-count{color:var(--primary);font-size:19px}.review-summary p{max-width:470px;margin:0;color:var(--text-sub);font-size:13px;text-align:right}.review-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.review-card{min-height:230px;padding:28px;border:1px solid var(--border);border-radius:20px;background:var(--card);box-shadow:0 10px 28px rgba(70,55,35,.04)}.review-stars{color:#9b7a31;font-size:14px;letter-spacing:.12em}.review-placeholder{margin:22px 0 28px;color:var(--text);font-family:var(--serif);font-size:18px;line-height:1.7}.review-meta{display:flex;justify-content:space-between;gap:14px;color:var(--text-light);font-size:12px}.review-legal-note{margin:16px 0 0;color:var(--text-light);font-size:12px;text-align:center}
-    .market-buttons{grid-template-columns:1fr}.market-choice{position:relative;min-height:88px;padding:20px 54px 18px 18px;display:grid;gap:2px;align-content:center;border:1px solid var(--border);border-radius:16px;background:#fff;transition:.22s ease}.market-choice:hover{transform:translateY(-2px);border-color:var(--primary);box-shadow:0 12px 28px rgba(47,62,22,.08)}.market-choice strong{color:var(--primary);font-size:16px}.market-choice small{color:var(--text-sub);font-size:12px}.benefit-badge{width:fit-content;margin-bottom:4px;padding:4px 8px;border-radius:999px;background:#eef0e5;color:var(--primary);font-size:10px;font-weight:900}.market-arrow{position:absolute;right:20px;top:50%;transform:translateY(-50%);color:var(--primary);font-size:20px}.benefit-note{margin:12px 0 0;color:var(--text-light);font-size:11px;line-height:1.55}
+    .market-buttons{grid-template-columns:1fr}.market-choice{position:relative;min-height:88px;padding:20px 54px 18px 18px;display:grid;gap:2px;align-content:center;border:1px solid var(--border);border-radius:16px;background:#FAF7EF;transition:.2s ease}.market-choice:hover{transform:translateY(-2px);border-color:var(--primary);box-shadow:0 12px 28px rgba(47,62,22,.08)}.market-choice strong{color:var(--primary);font-size:16px}.market-choice small{color:var(--text-sub);font-size:12px}.benefit-badge{width:fit-content;margin-bottom:4px;padding:4px 8px;border-radius:999px;background:#eef0e5;color:var(--primary);font-size:10px;font-weight:900}.market-arrow{position:absolute;right:20px;top:50%;transform:translateY(-50%);color:var(--primary);font-size:20px}.benefit-note{margin:12px 0 0;color:var(--text-light);font-size:11px;line-height:1.55}
     .lead-section{padding:0 0 90px;background:var(--card)}.lead-box{padding:48px 52px;display:grid;grid-template-columns:1fr auto;gap:36px;align-items:center;border:1px solid var(--border);border-radius:28px;background:radial-gradient(circle at 88% 10%,rgba(122,139,90,.12),transparent 28%),var(--bg)}.lead-copy h2{margin-bottom:12px;font-size:clamp(30px,4vw,42px)}.lead-copy p:last-child{max-width:680px;margin-bottom:0;color:var(--text-sub)}.channel-cta{min-width:275px;min-height:74px;padding:14px 18px;display:grid;grid-template-columns:42px 1fr auto;gap:12px;align-items:center;border-radius:16px;background:#FEE500;color:#191919;box-shadow:0 12px 30px rgba(74,62,10,.12);transition:.22s ease}.channel-cta:hover{transform:translateY(-2px)}.channel-dot,.channel-float-icon{display:grid;place-items:center;border-radius:50%;background:#191919;color:#FEE500;font-weight:900}.channel-dot{width:42px;height:42px}.channel-cta strong,.channel-cta small{display:block}.channel-cta small{margin-top:2px;color:rgba(25,25,25,.66);font-size:11px}.channel-float{position:fixed;right:24px;bottom:24px;z-index:998;min-height:58px;padding:8px 16px 8px 9px;display:flex;gap:9px;align-items:center;border-radius:999px;background:#FEE500;color:#191919;box-shadow:0 14px 34px rgba(38,32,8,.18)}.channel-float-icon{width:40px;height:40px;flex:0 0 40px}.channel-float-copy{font-size:10px;line-height:1.25}.channel-float-copy strong{font-size:12px}
     @media(max-width:900px){.compare-layout{grid-template-columns:1fr}.review-grid{grid-template-columns:1fr}.lead-box{grid-template-columns:1fr}.channel-cta{width:min(100%,360px)}}
     @media(max-width:767px){.hero-sizzle{font-size:14px;margin-bottom:24px}.review-summary{align-items:flex-start;flex-direction:column}.review-summary p{text-align:left}.lead-section{padding:0 0 72px}.lead-box{padding:34px 22px;border-radius:22px}.channel-cta{width:100%;min-width:0}.channel-float{right:16px;bottom:88px;width:48px;height:48px;min-height:0;padding:4px;justify-content:center}.channel-float-icon{width:40px;height:40px}.channel-float-copy{display:none}}
@@ -1286,8 +1308,8 @@
 
       <nav class="gnb" id="gnb" aria-label="주요 메뉴">
         <a href="#story">겨리 소개</a>
-        <a href="#products">우리 쌀</a>
         <a href="#promise">겨리의 기준</a>
+        <a href="#products">우리 쌀</a>
         <a href="#process">만드는 과정</a>
       </nav>
 
@@ -1323,8 +1345,9 @@
           </div>
         </div>
 
-        <div class="hero-visual" data-reveal aria-label="겨리 쌀 패키지와 갓 지은 밥을 표현한 임시 비주얼">
+        <div class="hero-visual" data-reveal">
           <img src="images/1_hero.webp" alt="겨리 특등급 새청무와 친들 10kg 쌀">
+        </div>
       </div>
     </section>
 
@@ -1413,19 +1436,19 @@
         <header class="section-heading center" data-reveal>
           <p class="eyebrow">품종 비교</p>
           <h2 id="compare-title">우리 집에는 어떤 쌀이 맞을까요?</h2>
-          <p class="lead">두 품종의 차이를 한눈에 보고, 평소 좋아하는 밥의 느낌에 가까운 쌀을 선택해보세요.</p>
+          <p class="lead">품종별 차이를 한눈에 보고, 평소 좋아하는 밥의 느낌에 가까운 쌀을 선택해보세요.</p>
         </header>
         <div class="compare-layout" data-reveal>
           <div class="compare-table-wrap">
             <table class="compare-table">
               <thead><tr><th>비교 항목</th><th>새청무</th><th>친들</th></tr></thead>
               <tbody>
-                <tr><th>핵심 인상</th><td><strong>편안함</strong><span>매일 먹기 편안한 방향</span></td><td><strong>담백함</strong><span>깔끔하고 편안한 방향</span></td></tr>
-                <tr><th>찰기</th><td><span class="test-pending">취반 테스트 예정</span></td><td><span class="test-pending">취반 테스트 예정</span></td></tr>
-                <tr><th>단맛</th><td><span class="test-pending">취반 테스트 예정</span></td><td><span class="test-pending">취반 테스트 예정</span></td></tr>
-                <tr><th>부드러움</th><td><span class="test-pending">취반 테스트 예정</span></td><td><span class="test-pending">취반 테스트 예정</span></td></tr>
-                <tr><th>고슬함</th><td><span class="test-pending">취반 테스트 예정</span></td><td><span class="test-pending">취반 테스트 예정</span></td></tr>
-                <tr><th>밥알 크기</th><td><span class="test-pending">취반 테스트 예정</span></td><td><span class="test-pending">취반 테스트 예정</span></td></tr>
+                <tr><th>핵심 인상</th><td><strong>편안함</strong><span>부드럽고 편안함</span></td><td><strong>담백함</strong><span>깔끔하고 담백함</span></td></tr>
+                <tr><th>찰기</th><td><span class="test-pending">●●●●○</span></td><td><span class="test-pending">●●●●●</span></td></tr>
+                <tr><th>단맛</th><td><span class="test-pending">●●●○○</span></td><td><span class="test-pending">●●●●○</span></td></tr>
+                <tr><th>부드러움</th><td><span class="test-pending">●●●●●</span></td><td><span class="test-pending">●●●○○</span></td></tr>
+                <tr><th>고슬함</th><td><span class="test-pending">●●○○○</span></td><td><span class="test-pending">●●●○○</span></td></tr>
+                <tr><th>밥알 크기</th><td><span class="test-pending">●●●○○</span></td><td><span class="test-pending">●●●●○</span></td></tr>
               </tbody>
             </table>
           </div>
@@ -1433,19 +1456,19 @@
         <div class="match-heading" data-reveal>
           <p class="eyebrow">취향으로 고르기</p>
           <h3>좋아하는 밥의 느낌으로 골라보세요.</h3>
-          <p>평소 선호하는 밥맛에 가까운 품종을 살펴보세요.</p>
+          <p>품종마다 다른 밥의 느낌을 살펴보세요.</p>
         </div>
         
         <div class="match-guide">
           <div class="match-card match-card--green">
-            <span class="match-kicker">이런 밥을 좋아한다면</span>
+            <span class="match-kicker">부드럽고 편안한 밥을 좋아한다면</span>
             <h4>새청무</h4>
-            <p>매일 먹는 집밥에서 한쪽으로 치우치지 않은 편안한 균형감을 중요하게 본다면 먼저 살펴보세요.</p>
+            <p>부드럽고 편안한 밥맛을 선호한다면 새청무를 살펴보세요.</p>
             <a href="#buy-saechungmu" class="text-link">새청무 구매처 보기 →</a>
           </div>
           <div class="match-card">
-            <span class="match-kicker">이런 밥을 좋아한다면</span>
-            <h4>친들</h4><p>깔끔하고 담백한 인상의 밥맛을 선호한다면 먼저 살펴보세요.</p>
+            <span class="match-kicker">깔끔하고 담백한 밥을 좋아한다면</span>
+            <h4>친들</h4><p>깔끔하고 담백한 밥맛을 선호한다면 친들을 살펴보세요.</p>
             <a href="#buy-chindeul" class="text-link">친들 구매처 보기 →</a></div>
         </div>
       </div>
@@ -1455,33 +1478,31 @@
     <section id="why-gyeori" class="section" aria-labelledby="why-title">
       <div class="container">
         <header class="section-heading" data-reveal>
-          <p class="eyebrow">말보다 확인할 수 있게</p>
-          <h2 id="why-title">품종부터 도정일,<br>공정까지 보여드립니다.</h2>
+          <p class="eyebrow">직접 확인하기</p>
+          <h2 id="why-title">고른 쌀의 정보는,<br>직접 확인할 수 있어야 합니다.</h2>
           <p class="lead">브랜드의 약속은 말이 아니라 실제 정보와 현장으로 증명합니다.</p>
         </header>
 
         <div class="why-list">
           <article class="why-item" data-reveal>
             <div class="why-media">
-              <!--<div class="visual-label">실제 쌀알·품종<br>클로즈업 이미지 영역</div>-->
               <img src="images/quality.webp" alt="실제 쌀알·품종">
             </div>
             <div class="why-copy">
               <span class="index">01 · 품종</span>
-              <h3>어떤 품종인지</h3>
-              <p>이름만 좋은 쌀이 아니라, 어떤 품종인지 먼저 알려드립니다.</p>
+              <h3>품종 표시</h3>
+              <p>판매하는 쌀의 품종을 포장에서 분명하게 확인할 수 있습니다.</p>
             </div>
           </article>
 
           <article class="why-item" data-reveal>
             <div class="why-media">
-              <!--<div class="visual-label">포장지의 생산연도·도정일<br>확대 이미지 영역</div>-->
               <img src="images/saechungmu_10kg_production.webp" alt="생산연월 도정일자">
             </div>
             <div class="why-copy">
               <span class="index">02 · 생산연도·도정일</span>
-              <h3>언제 만들어졌는지</h3>
-              <p>생산연도와 도정일을 포장에서 직접 확인할 수 있도록 표시합니다.</p>
+              <h3>생산연도·도정일</h3>
+              <p>생산연도와 도정연월일을 받아보신 포장에서 직접 확인하실 수 있습니다.</p>
             </div>
           </article>
 
@@ -1492,8 +1513,8 @@
             </div>
             <div class="why-copy">
               <span class="index">03 · 공정</span>
-              <h3>어떻게 만들어졌는지</h3>
-              <p>그림으로 꾸며낸 공정이 아니라 실제 사용되는 설비와 과정을 보여드립니다.</p>
+              <h3>실제 설비</h3>
+              <p>실제 사용하는 설비와 작업 현장을 통해 어떤 과정을 거치는지 보여드립니다.</p>
             </div>
           </article>
         </div>
@@ -1539,24 +1560,24 @@
       <div class="container">
         <div class="price-shell" data-reveal>
           <p class="eyebrow">가격의 이유</p>
-          <h2 id="price-title">필요한 과정에 집중해<br>가격을 만듭니다.</h2>
-          <p class="lead">겨리는 불필요한 유통 과정을 줄이고, 쌀에 필요한 과정에 집중합니다.</p>
+          <h2 id="price-title">필요한 곳에 집중한 만큼,<br>가격에도 이유가 있습니다.</h2>
+          <p class="lead">복잡한 유통보다, 좋은 쌀을 전달하는 데 필요한 과정에 집중합니다.</p>
 
           <div class="price-grid">
             <article class="price-card">
               <span class="num">01</span>
-              <h3>도정·포장 과정을 관리합니다.</h3>
-              <p>실제 사용하는 도정라인에서 품질과 공정을 확인합니다.</p>
+              <h3>도정·포장 과정을 확인합니다.</h3>
+              <p>실제 사용하는 도정라인에서 품질과 작업 과정을 확인합니다.</p>
             </article>
             <article class="price-card">
               <span class="num">02</span>
-              <h3>온라인 판매에 집중합니다.</h3>
-              <p>복잡한 판매 구조보다 온라인 판매에 집중합니다.</p>
+              <h3>판매 구조를 단순하게 가져갑니다.</h3>
+              <p>온라인 판매를 중심으로 운영해 복잡한 유통 단계를 늘리지 않습니다.</p>
             </article>
             <article class="price-card">
               <span class="num">03</span>
-              <h3>쌀에 필요한 곳에 비용을 씁니다.</h3>
-              <p>품종·도정·포장·배송처럼 실제 상품 경험에 필요한 과정에 집중합니다.</p>
+              <h3>상품의 기본에 집중합니다.</h3>
+              <p>품종·도정·포장·배송처럼 실제 상품 품질과 배송 경험에 필요한 부분에 집중합니다.</p>
             </article>
           </div>
 
@@ -1574,9 +1595,9 @@
         <div class="story-shell" data-reveal>
           <div class="story-copy">
             <p class="eyebrow">겨리 이야기</p>
-            <h2 id="story-title">둘이 함께<br>밭을 가는 일, 겨리.</h2>
-            <p>‘겨리’는 두 마리의 소가 힘을 맞춰 하나의 쟁기를 끌던 우리 농사의 방식에서 가져온 이름입니다.</p>
-            <p>혼자보다 함께, 빠르게보다 바르게.</p>
+            <h2 id="story-title">둘이 힘을 모아<br>밭을 가는 일, 겨리.</h2>
+            <p>‘겨리’는 두 마리 소가 힘을 모아 하나의 쟁기를 끌던 우리 농사의 방식에서 시작된 이름입니다.</p>
+            <p>혼자보다 함께, 빠르기보다 바르게.</p>
             <p>겨리는 그 자세로 매일 먹는 쌀을 고르고 담습니다.</p>
           </div>
         </div>
@@ -1607,21 +1628,20 @@
       <div class="container">
         <header class="section-heading center" data-reveal>
           <p class="eyebrow">구매처 안내</p>
-          <h2 id="buy-title">편하신 판매처에서<br>겨리를 만나보세요.</h2>
-          <p class="lead">편하신 판매처를 고르고, 현재 받을 수 있는 쿠폰·배송 혜택까지 확인해보세요.</p>
+          <h2 id="buy-title">원하시는 판매처에서<br>겨리 쌀을 만나보세요.</h2>
+          <p class="lead">판매처별 구폰과 배송 혜택을 확인하고 편하게 구매해보세요.</p>
         </header>
 
         <div class="buy-grid">
           <article id="buy-saechungmu" class="buy-card" data-reveal>
-            <span class="kicker">겨리의 쌀</span>
-            <h3>특등급 새청무 10kg</h3>
-            <p class="meta">2025년산 · 국내산 · 백미 10kg</p>
+            <h3>새청무 10kg</h3>
+            <p class="meta">특등급 · 국내산 · 백미</p>
             <div class="market-buttons">
-              <a class="market-choice outbound-link" href="https://smartstore.naver.com/gyeori365/products/13736992115" data-placeholder="false" data-market="naver" data-product="saechungmu"><span class="benefit-badge">혜택 확인</span><strong>네이버 스마트스토어</strong><small>스토어찜·쿠폰 혜택 확인하기</small><span class="market-arrow">→</span></a>
-              <a class="market-choice outbound-link" href="#" data-placeholder="true" data-market="coupang" data-product="saechungmu"><span class="benefit-badge">배송 확인</span><strong>쿠팡</strong><small>현재 배송 혜택·도착일 확인하기</small><span class="market-arrow">→</span></a>
+              <a class="market-choice outbound-link" href="https://smartstore.naver.com/gyeori365/products/13736992115" data-placeholder="false" data-market="naver" data-product="saechungmu"><span class="benefit-badge">혜택 확인</span><strong>네이버 스마트스토어</strong><small>쿠폰·적립 혜택 확인하기</small><span class="market-arrow">→</span></a>
+              <a class="market-choice outbound-link" href="#" data-placeholder="true" data-market="coupang" data-product="saechungmu"><span class="benefit-badge">배송 확인</span><strong>쿠팡</strong><small>배송·도착 예정일 확인하기</small><span class="market-arrow">→</span></a>
             </div>
             <details class="other-markets">
-              <summary>다른 판매처 보기 +</summary>
+              <summary>다른 판매처 보기</summary>
               <div class="other-market-list">
                 <span>G마켓</span><span>·</span><span>옥션</span><span>·</span><span>11번가</span><span>·</span><span>생생장터</span>
               </div>
@@ -1629,15 +1649,14 @@
           </article>
 
           <article id="buy-chindeul" class="buy-card" data-reveal>
-            <span class="kicker">겨리의 쌀</span>
-            <h3>특등급 친들 10kg</h3>
-            <p class="meta">2025년산 · 국내산 · 백미 10kg</p>
+            <h3>친들 10kg</h3>
+            <p class="meta">특등급 · 국내산 · 백미</p>
             <div class="market-buttons">
-              <a class="market-choice outbound-link" href="https://smartstore.naver.com/gyeori365/products/13737018845" data-placeholder="false" data-market="naver" data-product="chindeul"><span class="benefit-badge">혜택 확인</span><strong>네이버 스마트스토어</strong><small>스토어찜·쿠폰 혜택 확인하기</small><span class="market-arrow">→</span></a>
-              <a class="market-choice outbound-link" href="#" data-placeholder="true" data-market="coupang" data-product="chindeul"><span class="benefit-badge">배송 확인</span><strong>쿠팡</strong><small>현재 배송 혜택·도착일 확인하기</small><span class="market-arrow">→</span></a>
+              <a class="market-choice outbound-link" href="https://smartstore.naver.com/gyeori365/products/13737018845" data-placeholder="false" data-market="naver" data-product="chindeul"><span class="benefit-badge">혜택 확인</span><strong>네이버 스마트스토어</strong><small>쿠폰·적립 혜택 확인하기</small><span class="market-arrow">→</span></a>
+              <a class="market-choice outbound-link" href="#" data-placeholder="true" data-market="coupang" data-product="chindeul"><span class="benefit-badge">배송 확인</span><strong>쿠팡</strong><small>배송·도착 예정일 확인하기</small><span class="market-arrow">→</span></a>
             </div>
             <details class="other-markets">
-              <summary>다른 판매처 보기 +</summary>
+              <summary>다른 판매처 보기</summary>
               <div class="other-market-list">
                 <span>G마켓</span><span>·</span><span>옥션</span><span>·</span><span>11번가</span><span>·</span><span>생생장터</span>
               </div>
