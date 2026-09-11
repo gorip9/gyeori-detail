@@ -1082,9 +1082,9 @@
 
     /* Conversion Optimization v2 */
     .hero-sizzle{max-width:580px;margin:-6px 0 28px;padding-left:16px;border-left:2px solid var(--border);color:#5f594d;font-family:var(--serif);font-size:15px;line-height:1.8}
-    .compare-layout{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(320px,.65fr);gap:28px;align-items:stretch}
+    .compare-layout{display:block;width:100%;grid-template-columns:minmax(0,1.35fr) minmax(320px,.65fr);gap:28px;align-items:stretch}
     .compare-table-wrap{overflow-x:auto;border:1px solid var(--border);border-radius:22px;background:var(--card)}
-    .compare-table{width:100%;min-width:660px;border-collapse:collapse;table-layout:fixed}.compare-table th,.compare-table td{padding:16px 18px;border-bottom:1px solid #e7ddcd;vertical-align:top;text-align:left}.compare-table thead th{background:var(--primary);color:#fff;font-size:14px;font-weight:850}.compare-table thead th:first-child{width:28%}.compare-table tbody th{color:var(--primary);font-size:14px}.compare-table td strong{display:block;margin-bottom:3px;color:var(--primary);font-size:17px}.compare-table td>span:not(.test-pending){display:block;color:var(--text-sub);font-size:13px}.compare-table tr:last-child th,.compare-table tr:last-child td{border-bottom:0}.test-pending{display:inline-flex;padding:7px 10px;border-radius:999px;background:var(--bg);color:var(--text-sub);font-size:12px;line-height:1.35}
+    .compare-table{width:100%;min-width:max(100%, clac(180px + (var(--variety-count)*260px)));border-collapse:collapse;table-layout:fixed}.compare-table th,.compare-table td{padding:16px 18px;border-bottom:1px solid #e7ddcd;vertical-align:top;text-align:left}.compare-table thead th{width:180px;position:sticky;left:0;z-index:2;background:var(--primary);color:#fff;font-size:14px;font-weight:850}.compare-table thead th:first-child{width:28%}.compare-table tbody th{color:var(--primary);font-size:14px}.compare-table td strong{display:block;margin-bottom:3px;color:var(--primary);font-size:17px}.compare-table td>span:not(.test-pending){display:block;color:var(--text-sub);font-size:13px}.compare-table tr:last-child th,.compare-table tr:last-child td{border-bottom:0}.test-pending{display:inline-flex;padding:7px 10px;border-radius:999px;background:var(--bg);color:var(--text-sub);font-size:12px;line-height:1.35}
     .match-guide{display:grid;gap:14px}.match-card{padding:26px;border:1px solid var(--border);border-radius:20px;background:var(--card)}.match-card--green{background:#eef0e5;border-color:#ccd2ba}.match-kicker{color:var(--primary-light);font-size:11px;font-weight:900;letter-spacing:.12em}.match-card h4{margin:7px 0 8px;color:var(--primary);font-family:var(--serif);font-size:28px;}.match-card p{color:var(--text-sub);font-size:14px;line-height:1.7}.compare-note{margin:2px 2px 0;color:var(--text-light);font-size:12px;line-height:1.65}
     .match-heading{margin-top:48px;margin-bottom:24px;max-width:680px;}.match-heading .eyebrow{margin-bottom:10px;}.match-heading h3{margin:0 0 10px;color:var(--primary);font-family:var(--serif);font-size:clamp(26px, 3vw, 34px);line-height:1.35;}.match-heading>p:last-child{margin:0;color:var(--text-sub);font-size:15px;line-height:1.7;}
     .review-summary{margin-bottom:22px;padding:25px 28px;display:flex;justify-content:space-between;gap:24px;align-items:center;border:1px solid var(--border);border-radius:18px;background:var(--bg)}.review-summary-label{display:block;margin-bottom:5px;color:var(--primary-light);font-size:11px;font-weight:900;letter-spacing:.13em}.review-count{color:var(--primary);font-size:19px}.review-summary p{max-width:470px;margin:0;color:var(--text-sub);font-size:13px;text-align:right}.review-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.review-card{min-height:230px;padding:28px;border:1px solid var(--border);border-radius:20px;background:var(--card);box-shadow:0 10px 28px rgba(70,55,35,.04)}.review-stars{color:#9b7a31;font-size:14px;letter-spacing:.12em}.review-placeholder{margin:22px 0 28px;color:var(--text);font-family:var(--serif);font-size:18px;line-height:1.7}.review-meta{display:flex;justify-content:space-between;gap:14px;color:var(--text-light);font-size:12px}.review-legal-note{margin:16px 0 0;color:var(--text-light);font-size:12px;text-align:center}
@@ -1637,13 +1637,16 @@
             <h3>새청무 10kg</h3>
             <p class="meta">특등급 · 국내산 · 백미</p>
             <div class="market-buttons">
-              <a class="market-choice outbound-link" href="https://smartstore.naver.com/gyeori365/products/13736992115" data-placeholder="false" data-market="naver" data-product="saechungmu"><span class="benefit-badge">혜택 확인</span><strong>네이버 스마트스토어</strong><small>쿠폰·적립 혜택 확인하기</small><span class="market-arrow">→</span></a>
-              <a class="market-choice outbound-link" href="#" data-placeholder="true" data-market="coupang" data-product="saechungmu"><span class="benefit-badge">배송 확인</span><strong>쿠팡</strong><small>배송·도착 예정일 확인하기</small><span class="market-arrow">→</span></a>
+              <a class="market-choice outbound-link" href="https://smartstore.naver.com/gyeori365/products/13736992115" target="_blank" rel="noopener noreferrer" data-placeholder="false" data-market="naver" data-product="saechungmu"><span class="benefit-badge">혜택 확인</span><strong>네이버 스마트스토어</strong><small>쿠폰·적립 혜택 확인하기</small><span class="market-arrow">→</span></a>
+              <a class="market-choice outbound-link" href="https://www.coupang.com/vp/products/16368809583" data-placeholder="true" data-market="coupang" data-product="saechungmu"><span class="benefit-badge">배송 확인</span><strong>쿠팡</strong><small>배송·도착 예정일 확인하기</small><span class="market-arrow">→</span></a>
             </div>
             <details class="other-markets">
               <summary>다른 판매처 보기</summary>
               <div class="other-market-list">
-                <span>G마켓</span><span>·</span><span>옥션</span><span>·</span><span>11번가</span><span>·</span><span>생생장터</span>
+                <span><a href="https://item.gmarket.co.kr/Item?goodscode=4852266793" target="_blank" rel="noopener noreferrer">G마켓</a></span><span>·</span>
+                <span><a href="https://itempage3.auction.co.kr/DetailView.aspx?ItemNo=F659788088&frm3=V2" target="_blank" rel="noopener noreferrer">옥션</a></span><span>·</span>
+                <span><a href="https://www.11st.co.kr/products/9612327745" target="_blank" rel="noopener noreferrer">11번가</span></a><span>·</span>
+                <span><a href="https://freshjb.com/pages/product/product-detail.html?productNo=136643626&preview=true" target="_blank" rel="noopener noreferrer">생생장터</a></span>
               </div>
             </details>
           </article>
@@ -1652,13 +1655,16 @@
             <h3>친들 10kg</h3>
             <p class="meta">특등급 · 국내산 · 백미</p>
             <div class="market-buttons">
-              <a class="market-choice outbound-link" href="https://smartstore.naver.com/gyeori365/products/13737018845" data-placeholder="false" data-market="naver" data-product="chindeul"><span class="benefit-badge">혜택 확인</span><strong>네이버 스마트스토어</strong><small>쿠폰·적립 혜택 확인하기</small><span class="market-arrow">→</span></a>
-              <a class="market-choice outbound-link" href="#" data-placeholder="true" data-market="coupang" data-product="chindeul"><span class="benefit-badge">배송 확인</span><strong>쿠팡</strong><small>배송·도착 예정일 확인하기</small><span class="market-arrow">→</span></a>
+              <a class="market-choice outbound-link" href="https://smartstore.naver.com/gyeori365/products/13737018845" target="_blank" rel="noopener noreferrer" data-placeholder="false" data-market="naver" data-product="chindeul"><span class="benefit-badge">혜택 확인</span><strong>네이버 스마트스토어</strong><small>쿠폰·적립 혜택 확인하기</small><span class="market-arrow">→</span></a>
+              <a class="market-choice outbound-link" href="https://www.coupang.com/vp/products/16368811454" data-placeholder="true" data-market="coupang" data-product="chindeul"><span class="benefit-badge">배송 확인</span><strong>쿠팡</strong><small>배송·도착 예정일 확인하기</small><span class="market-arrow">→</span></a>
             </div>
             <details class="other-markets">
               <summary>다른 판매처 보기</summary>
               <div class="other-market-list">
-                <span>G마켓</span><span>·</span><span>옥션</span><span>·</span><span>11번가</span><span>·</span><span>생생장터</span>
+                <span><a href="https://item.gmarket.co.kr/Item?goodscode=4852271689" target="_blank" rel="noopener noreferrer">G마켓</a></span><span>·</span>
+                <span><a href="https://itempage3.auction.co.kr/DetailView.aspx?ItemNo=F659794914&frm3=V2" target="_blank" rel="noopener noreferrer">옥션</a></span><span>·</span>
+                <span><a href="https://www.11st.co.kr/products/9612361955" target="_blank" rel="noopener noreferrer">11번가</span></a><span>·</span>
+                <span><a href="https://freshjb.com/pages/product/product-detail.html?productNo=136758362&preview=true" target="_blank" rel="noopener noreferrer">생생장터</a></span>
               </div>
             </details>
           </article>
